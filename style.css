@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    width: 50%;
+   background-color: rgb(25, 115, 115);
+    margin: auto;
+    margin-top: 10%;
+}
+#style{
+    position: absolute;
+    z-index: -1;
+    width:700px;
+    top: 0;
+    right: 20px;
+   
+}
+
+.container span{
+    color: rgb(255, 255, 255);
+}
+.container{
+   
+  
+}
+#gen{
+    width: 40px;
+    color: none;
+   
+    border: none;
+    cursor: pointer;
+    margin: 2%;
+}
+#copy{
+    border: none;
+    cursor: pointer;
+    position: relative;
+    top: 1rem;
+    
+}
+#copy img{
+    width: 40px;
+   margin-top: 10px;
+}
+input{
+    border: none;
+    padding: 15px;
+    width: 60%;
+    border-radius: 20px;
+    margin: 10px;
+    
+}
+h1 div{
+    display: inline;
+    color: rgb(18, 172, 172);
+}

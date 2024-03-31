@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random password generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Kode+Mono:wght@400..700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <div class="container">
+        <img src="intricate.svg"  id='style'alt="">
+<h1> This is a <div>Random</div><br> <span> password generator</span></h1>
+     
+<input type="text" id="password" placeholder="password"><img src="copy.svg" onclick="copycom()" id="copy" alt=""> 
+<br><img id="gen" src="gear.svg" alt="" onclick="getpassword()">
+
+</div>
+    
+
+
+    <script >
+const passwordbox=document.getElementById('password')
+const lengths=12
+
+const uppercase="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+const lowercase="abcdefghijklmnopqrstuvwxyz"
+const numbers="1234567890"
+const symbols="!@#$%^&*()_+{}[];<>/?"
+function getpassword(){
+
+    let password=""
+    password+= uppercase[Math.floor(Math.random()* uppercase.length)];
+    password+= lowercase[Math.floor(Math.random()* lowercase.length)];
+    password+=numbers[Math.floor(Math.random()*numbers.length)];
+    password+=symbols[Math.floor(Math.random()*symbols.length)];
+let whole = uppercase+lowercase+numbers+symbols
+
+    while(lengths>password.length){
+    password+=whole[Math.floor(Math.random()*whole.length)]
+    }
+    passwordbox.value=password
+}
+
+function copycom(){
+    passwordbox.select()
+    document.execCommand("copy");
+}
+
+
+
+    </script>
+</body>
+</html>
